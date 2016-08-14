@@ -17,6 +17,12 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("Enter distance travelled in Kilometres");
+            double Distance = Convert.ToDouble(Console.ReadLine());
+            double Fare = (2.40 + Distance * 0.4);                 //how to round UPWARDS to nearest 10 cents
+            double EstFare = Math.Ceiling(Fare * 10)/10;           //RoundUP to 1 dec. place = 10 cents
+            Console.WriteLine("Fare is ${0:0.00}", EstFare);
+            Console.ReadLine();
         }
 
         public static double CalculateFare(double distance)
