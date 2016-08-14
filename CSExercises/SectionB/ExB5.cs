@@ -17,6 +17,16 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("Enter a value for x");
+            int x = Convert.ToInt32(Console.ReadLine());        //Convert String to Int32
+            /* 
+            int x1 = (5 * x * x);                               //Compute 5xx
+            int x2 = (4 * x);                                   //Compute 4x
+            int y = (x1 - x2 + 3);                              //Compute y=5xx-4x+3 
+            */
+            int y = (5 * x * x - 4 * x + 3);
+            Console.WriteLine(y);                               //Print Answer
+            Console.ReadLine();
         }
 
         public static double CalculateY(double x)
