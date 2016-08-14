@@ -19,8 +19,10 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
+            /* can combine these two into ONE line
             Console.WriteLine("John Smith");
-            Console.WriteLine("e0011223 @u.nus.edu");
+            Console.WriteLine("e0011223 @u.nus.edu"); */
+            Console.WriteLine("John Smith\ne0011223@u.nus.edu");
         }
     }
 }
