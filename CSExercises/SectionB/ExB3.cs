@@ -19,6 +19,13 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("Enter your Salary");
+            double Salary = Convert.ToDouble(Console.ReadLine());        //Convert String to Double
+            double Housing = (0.1 * Salary);                             //Compute Housing Allowance 10%
+            double Transport = (0.03 * Salary);                          //Compute Transport Allowance 3%
+            double TotalSalary = (Salary + Housing + Transport);         //Compute Total Salary Add All
+            Console.WriteLine("Total Salary is ${0:0.00}", TotalSalary); //Print Total Salary in $##.## format
+            Console.ReadLine();
 
         }
 
