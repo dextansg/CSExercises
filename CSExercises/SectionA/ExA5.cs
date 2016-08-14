@@ -20,10 +20,16 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
+            /*
             string inputStr = Console.ReadLine();
             double inputDbl = Convert.ToDouble(inputStr);
-
+            */
             //YOUR CODE HERE
+            Console.WriteLine("Enter a number with or without decimals");   //input Number with decimals
+            string strNumber = Console.ReadLine();                          //read Number as String
+            double dblNumber = Convert.ToDouble(strNumber);                 //convert String to Double
+            Console.WriteLine("Result is {0:0.00}", dblNumber);             //Prints Double as 2 dec. places
+            Console.ReadLine();
 
         }
 
