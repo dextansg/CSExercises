@@ -15,7 +15,12 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //PUT YOUR CODE HERE           
+            //PUT YOUR CODE HERE 
+            Console.WriteLine("Input a Number");                //Input Number as String
+            double i = Convert.ToDouble(Console.ReadLine());    //Convert strNumber to Double
+            double Result = i * i;                              //Compute Result = Square of the number
+            Console.WriteLine(Result);
+            Console.ReadLine();
         }
 
         public static double square(double x)
