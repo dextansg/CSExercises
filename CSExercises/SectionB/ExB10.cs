@@ -20,7 +20,18 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
-
+            Console.WriteLine("Enter lengths of 3 sides of a triangle");
+            double A = Convert.ToDouble(Console.ReadLine());
+            double B = Convert.ToDouble(Console.ReadLine());
+            double C = Convert.ToDouble(Console.ReadLine());
+            double Perimeter = (A + B + C);
+            double s = (Perimeter / 2);
+            double a = (s - A);
+            double b = (s - B);
+            double c = (s - C);
+            double Area = Math.Sqrt(s * a * b * c);
+            Console.WriteLine("Area is {0}", Area);
+            Console.ReadLine();
         }
 
         public static double CalculateArea(double a, double b, double c)
