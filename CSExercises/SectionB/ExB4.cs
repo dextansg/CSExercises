@@ -15,6 +15,11 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("Enter Temperate in Celsius");
+            double C = Convert.ToInt32(Console.ReadLine());                 //Convert Celsius String to Int32
+            double F = (1.8 * C + 32);                                      //Compute Temp in Fahrenheit
+            Console.WriteLine("Temperature in Fahrenheit is {0:0}", F);     //Print Temp in Fahrenheit
+            Console.ReadLine();
 
         }
 
