@@ -19,7 +19,7 @@ namespace CSExercises
             Console.WriteLine("Please enter your name:");
             string name = Console.ReadLine();
             //YOUR CODE HERE
-            Console.WriteLine("Hello" + name);
+            Console.WriteLine("Good Morning " + name);
             Console.ReadLine();
         }
     }
