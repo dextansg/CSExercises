@@ -21,13 +21,26 @@ namespace CSExercises
         {
             //YOUR CODE HERE
             Console.WriteLine("Enter a 3-digit number: ");
-            string s = Console.ReadLine();
+            string n = Console.ReadLine();
 
-            string n1 = s.Substring(0, 1);
-            string n2 = s.Substring(1, 1);
-            string n3 = s.Substring(2, 1);
+            bool IsArmstrongNumber;                                          //return IsArmstrongNumber true/false?
 
-            int n = Convert.ToInt32(s);
+            Console.WriteLine("IsArmStrongNumber?\t{0}", IsArmstrongNumber); //how to call?
+            Console.ReadLine();
+
+
+        }
+
+
+        public static bool IsArmstrongNumber(string n)
+        {
+            //YOUR CODE HERE
+
+            string n1 = n.Substring(0, 1);
+            string n2 = n.Substring(1, 1);
+            string n3 = n.Substring(2, 1);
+
+            int nInt = Convert.ToInt32(n);
             int n1Int = Convert.ToInt32(n1);
             int n2Int = Convert.ToInt32(n2);
             int n3Int = Convert.ToInt32(n3);
@@ -37,40 +50,19 @@ namespace CSExercises
             int n3IntCube = n3Int * n3Int * n3Int;
             int sum = n1IntCube + n2IntCube + n3IntCube;
 
-            bool IsArmstrongNo;
+            bool IsArmstrongNumber;
 
-            if (sum == n)
+            if (sum == nInt)
             {
-                IsArmstrongNo = true;
+                IsArmstrongNumber = true;
             }
             else
             {
-                IsArmstrongNo = false;
+                IsArmstrongNumber = false;
             }
 
-
-            Console.WriteLine("IsArmStrongNo?\t{0}",IsArmstrongNo);
-            Console.ReadLine();
-
+            return IsArmstrongNumber;
 
         }
-
-
-        /*public static bool IsArmstrongNumber(int x)
-        {
-            //YOUR CODE HERE
-            int sum = 0;
-
-            if (sum == n)
-            {
-               bool IsArmstrongNumber = true;
-            }
-            else
-            {
-                bool IsArmstrongNumber = false;
-            }
-            return;
-
-        }*/
     }
 }
