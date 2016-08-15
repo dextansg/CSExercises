@@ -15,18 +15,62 @@ namespace CSExercises
 
     public class ExC5
     {
+
+
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("Enter a 3-digit number: ");
+            string s = Console.ReadLine();
+
+            string n1 = s.Substring(0, 1);
+            string n2 = s.Substring(1, 1);
+            string n3 = s.Substring(2, 1);
+
+            int n = Convert.ToInt32(s);
+            int n1Int = Convert.ToInt32(n1);
+            int n2Int = Convert.ToInt32(n2);
+            int n3Int = Convert.ToInt32(n3);
+
+            int n1IntCube = n1Int * n1Int * n1Int;
+            int n2IntCube = n2Int * n2Int * n2Int;
+            int n3IntCube = n3Int * n3Int * n3Int;
+            int sum = n1IntCube + n2IntCube + n3IntCube;
+
+            bool IsArmstrongNo;
+
+            if (sum == n)
+            {
+                IsArmstrongNo = true;
+            }
+            else
+            {
+                IsArmstrongNo = false;
+            }
+
+
+            Console.WriteLine("IsArmStrongNo?\t{0}",IsArmstrongNo);
+            Console.ReadLine();
+
 
         }
 
 
-        public static bool IsArmstrongNumber(int n)
+        /*public static bool IsArmstrongNumber(int x)
         {
             //YOUR CODE HERE
-            return false;
+            int sum = 0;
 
-        }
+            if (sum == n)
+            {
+               bool IsArmstrongNumber = true;
+            }
+            else
+            {
+                bool IsArmstrongNumber = false;
+            }
+            return;
+
+        }*/
     }
 }

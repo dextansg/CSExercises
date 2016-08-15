@@ -20,9 +20,13 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-
             //Your code here
-
+            Console.WriteLine("Enter travel distance in Kilometers");
+            double distance = Convert.ToDouble(Console.ReadLine());         //Convert string distance to Double
+            
+            double fare = CalculateFare(distance);
+            Console.WriteLine("Fare is ${0:0.00}", fare);
+            Console.ReadLine();
 
 
         }
@@ -30,7 +34,26 @@ namespace CSExercises
         public static double CalculateFare(double distance)
         {
             //YOUR CODE HERE
-            return 0;
+            double fare = 0;                                                //initialize double to 0
+            double nextdistance = distance - 0.5;
+            double lastdistance = distance - 0.5 - 8.5;
+            double lastdistanceRoundup = Math.Ceiling(lastdistance * 10) / 10;  //Roundup lastdistance
+
+
+            if (distance > 0.5 && distance <= 9)
+            {
+                fare = 2.40 + nextdistance * 10 * 0.04;
+            }
+            else if (distance > 9)
+            {
+                fare = 2.40 + 3.40 + lastdistanceRoundup * 10 * 0.05;
+            }
+            else
+            {
+                fare = 2.40;
+            }
+
+            return fare;
 
 
 
